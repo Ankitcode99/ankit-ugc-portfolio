@@ -467,3 +467,25 @@ body.reel-modal-open {overflow:hidden;}
 }
 @media (max-width: 380px) { .menu-toggle-label {display:none;} .mobile-menu-toggle {padding:12px;} .wordmark-name {font-size:13px;} .wordmark-role {font-size:8px;} }
 @media (prefers-reduced-motion: reduce) { .main-nav.is-open {animation:none;} .menu-toggle-lines span {transition:none;} }
+
+/* Device-independent external-link arrow: SVG instead of emoji/text glyph. */
+.external-arrow-icon { width: 1em; height: 1em; flex: 0 0 auto; display: inline-block; vertical-align: -0.12em; color: inherit; }
+.social-arrow .external-arrow-icon { display: block; }
+.button-arrow .external-arrow-icon { display: block; }
+.reel-preview-bottom .external-arrow-icon { width: 15px; height: 15px; }
+.youtube-link-action .external-arrow-icon { width: 0.85em; height: 0.85em; margin-left: 3px; }
+
+/* Mobile portrait: compact, square, horizontally centered */
+@media (max-width: 640px) {
+  .hero-aside {
+    width: min(68vw, 240px);
+    max-width: 240px;
+    align-self: center;
+    justify-self: center;
+    margin-inline: auto;
+    margin-top: 0;
+  }
+  .hero-aside .portrait-frame { aspect-ratio: 1 / 1; }
+  .hero-aside .portrait-frame img { object-fit: cover; object-position: center; }
+  .hero-aside .aside-caption { text-align: center; }
+}
